@@ -134,7 +134,14 @@ footer .btn-license {
     display: inline-block;
 }
 
-footer .btn-license:hover {
-    background-color: #218838;
+/* License Page Styling Enhancements */
+.license-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.license-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
 }
 
