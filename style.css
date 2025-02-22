@@ -1,37 +1,3 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fa;
-    color: #34495e;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-h1, h2, h3, p {
-    margin-bottom: 1rem;
-}
-
-button {
-    border: none;
-    cursor: pointer;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Header */
 header {
     background-color: #2c3e50;
     color: white;
@@ -40,22 +6,14 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header nav .logo {
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-header nav ul li {
-    margin-right: 15px;
+    font-family: 'Poppins', sans-serif;
 }
 
 header nav ul li a {
@@ -63,185 +21,61 @@ header nav ul li a {
     font-size: 1.1rem;
     font-weight: bold;
     padding: 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 header nav ul li a:hover {
     color: #e74c3c;
+    transform: translateY(-2px);
 }
 
-/* Hero Section (Home Page) */
 #home {
     background: linear-gradient(135deg, #2c3e50, #34495e);
     color: white;
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 5rem 1rem;
+    background-image: url('hero-bg.jpg'); /* Add a subtle background image */
+    background-size: cover;
+    background-position: center;
 }
 
 #home h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
 #home p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #home .btn-invite {
     background-color: #e74c3c;
     color: white;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
 #home .btn-invite:hover {
     background-color: #c0392b;
+    transform: scale(1.05);
 }
 
-/* About Section */
-#about {
-    padding: 3rem 2rem;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-}
-
-#about p {
+#help ul li {
+    margin: 1.5rem 0;
     font-size: 1.2rem;
-    color: #7f8c8d;
-    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
 }
 
-/* Help Section */
-#help {
-    padding: 3rem 2rem;
-    background-color: #ecf0f1;
-    text-align: center;
-}
-
-#help h2 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-}
-
-#help p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    margin-bottom: 2rem;
-}
-
-/* License Page */
-.license-content {
-    max-width: 900px;
-    margin: 2rem auto;
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.license-logo {
-    width: 180px;
-    height: auto;
-    display: block;
-    margin: 0 auto 2rem;
-}
-
-.license-content h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: #2c3e50;
-}
-
-.license-content h3 {
-    font-size: 1.8rem;
-    color: #34495e;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.license-content ul {
-    font-size: 1.1rem;
-    color: #7f8c8d;
-    margin-top: 1rem;
-}
-
-.license-content ul li {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.license-content ul li:before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    color: #27ae60;
-}
-
-footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 3rem;
-}
-
-footer p {
-    font-size: 1rem;
-    color: #bdc3c7;
-}
-
-/* Button and Links Styling */
-.btn-invite, .license-link {
-    color: #3498db;
-    font-size: 1.1rem;
-}
-
-.btn-invite:hover, .license-link:hover {
-    color: #2980b9;
-    text-decoration: underline;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-    }
-
-    header nav ul li {
-        margin-bottom: 1rem;
-    }
-
-    #home h1 {
-        font-size: 2.5rem;
-    }
-
-    #home p {
-        font-size: 1rem;
-    }
-
-    .license-content {
-        padding: 1.5rem;
-    }
-
-    .license-content h2 {
-        font-size: 2rem;
-    }
-
-    .license-content h3 {
-        font-size: 1.5rem;
-    }
-
-    .license-content ul li {
-        font-size: 1rem;
-    }
+#help ul li i {
+    margin-right: 10px;
+    color: #e74c3c;
+    font-size: 1.5rem;
 }
