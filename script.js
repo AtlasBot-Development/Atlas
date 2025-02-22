@@ -11,3 +11,6 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
     observer.observe(section);
 });
+window.addEventListener('load', () => {
+    document.querySelector('.loader').style.display = 'none';
+});
