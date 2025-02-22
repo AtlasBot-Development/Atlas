@@ -123,3 +123,18 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+
+footer .btn-license {
+    background-color: #28a745;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+footer .btn-license:hover {
+    background-color: #218838;
+}
+
