@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,58 +6,75 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #34495e;
     line-height: 1.6;
-    background-color: #f4f4f4;
 }
 
-header {
-    background: #333;
-    color: white;
-    padding: 1rem;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-header ul {
+ul {
     list-style: none;
 }
 
-header ul li {
-    display: inline;
-    margin-left: 20px;
+h1, h2, h3, p {
+    margin-bottom: 1rem;
 }
 
-header ul li a {
+button {
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
     color: white;
-    text-decoration: none;
-    font-size: 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-header ul li a.btn-invite {
-    background-color: #007bff;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
+header nav .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-header ul li a.btn-invite:hover {
-    background-color: #0056b3;
+header nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
+header nav ul li {
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+header nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Hero Section (Home Page) */
 #home {
-    background: #007bff;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
     color: white;
     text-align: center;
-    padding: 5rem 0;
+    padding: 3rem 1rem;
 }
 
 #home h1 {
@@ -70,78 +88,160 @@ header ul li a.btn-invite:hover {
 }
 
 #home .btn-invite {
-    background-color: #fff;
-    color: #007bff;
+    background-color: #e74c3c;
+    color: white;
     padding: 1rem 2rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 #home .btn-invite:hover {
-    background-color: #ddd;
+    background-color: #c0392b;
 }
 
-section {
-    padding: 3rem 0;
+/* About Section */
+#about {
+    padding: 3rem 2rem;
+    background-color: #ffffff;
     text-align: center;
 }
 
-section h2 {
+#about h2 {
     font-size: 2.5rem;
+    color: #2c3e50;
     margin-bottom: 1.5rem;
 }
 
-.about-content p {
+#about p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+/* Help Section */
+#help {
+    padding: 3rem 2rem;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+#help h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+#help p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+/* License Page */
+.license-content {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.license-logo {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+.license-content h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.license-content h3 {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.license-content ul {
     font-size: 1.1rem;
-    line-height: 1.8;
+    color: #7f8c8d;
+    margin-top: 1rem;
 }
 
-.help-content ul {
-    list-style-type: none;
-    padding: 0;
+.license-content ul li {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
 }
 
-.help-content ul li {
-    margin: 0.5rem 0;
-}
-
-.help-content ul li a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-.help-content ul li a:hover {
-    text-decoration: underline;
+.license-content ul li:before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #27ae60;
 }
 
 footer {
-    background-color: #333;
+    background-color: #2c3e50;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
+    margin-top: 3rem;
 }
 
-footer .btn-license {
-    background-color: #28a745;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 1rem;
-    display: inline-block;
+footer p {
+    font-size: 1rem;
+    color: #bdc3c7;
 }
 
-/* License Page Styling Enhancements */
-.license-link {
-    color: #007bff;
-    text-decoration: none;
+/* Button and Links Styling */
+.btn-invite, .license-link {
+    color: #3498db;
+    font-size: 1.1rem;
 }
 
-.license-link:hover {
+.btn-invite:hover, .license-link:hover {
+    color: #2980b9;
     text-decoration: underline;
-    color: #0056b3;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-bottom: 1rem;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    .license-content {
+        padding: 1.5rem;
+    }
+
+    .license-content h2 {
+        font-size: 2rem;
+    }
+
+    .license-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .license-content ul li {
+        font-size: 1rem;
+    }
+}
